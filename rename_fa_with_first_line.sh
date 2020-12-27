@@ -1,0 +1,1 @@
+for name in *.fa; do mv $name "$(head -1 $name|sed 's/>//g'| sed 's/ /_/g'| sed 's/\?//g' | sed 's/,//g'| sed 's/complete_genome//g'|sed 's/partial_genome//g'|sed 's/partial_sequence//g' | sed 's/complete_cds//g' | sed 's/partial_cds//g'| sed 's/complete_sequence//g' | sed 's/$/\.fa/g'| sed 's/_\./\./g')"; done

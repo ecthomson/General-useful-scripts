@@ -1,0 +1,2 @@
+#removes all files under 160kb. For bytes, use c
+find . -name "*.tif" -size -160k -delete
